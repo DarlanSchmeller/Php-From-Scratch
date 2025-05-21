@@ -46,8 +46,6 @@ Here’s what I’m doing in this project:
 - **Project Structure**  
   I split the app into two main directories:
 
-/Framework → Core logic (router, session, validation, etc.)
-/App → Controllers, views, and business logic
 <pre>
 /Framework → Core logic (router, session, validation, etc.)
 /App → Controllers, views, and business logic
