@@ -31,38 +31,38 @@ $num3 /= 2;
 // Built-in PHP Functions
 
 // rand()
-$output[] = rand(1,10);
-$output[] = getrandmax();
+$output[] = rand(1,10); // Generate a random integer
+$output[] = getrandmax(); // Show largest possible random value
 
 // round()
-$output[] = round(4.7);
+$output[] = round(4.7); // Returns the rounded value of val to specified precision (number of digits after the decimal point)
 $output[] = round(4.2);
 
 // ceil()
-$output[] = ceil(4.7);
+$output[] = ceil(4.7); // Round fractions up
 
 // floor()
-$output[] = floor(4.7);
+$output[] = floor(4.7); // Round fractions down
 
 // sqrt()
-$output[] = sqrt(64);
+$output[] = sqrt(64); // Square root
 
 // pi()
-$output[] = pi();
+$output[] = pi(); // Get value of pi
 
 // abs()
-$output[] = abs(-4.7);
+$output[] = abs(-4.7); // Absolute value
 
 // max()
-$output[] = max([1,3,4,70,25]);
+$output[] = max([1,3,4,70,25]); // Find highest value
 $output[] = max(2,3,4,70,80);
 
 // min()
-$output[] = min(1,3,4,70,80);
+$output[] = min(1,3,4,70,80); // Find lowest value
 $output[] = min(133,494,10,4);
 
 // number_format()
-$output[] = number_format(1234567.191234, 2, '.', ',');
+$output[] = number_format(1234567.191234, 2, '.', ','); // Format a number with grouped thousands
 
 ?>
 <!DOCTYPE html>
