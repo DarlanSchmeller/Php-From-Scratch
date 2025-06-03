@@ -1,8 +1,8 @@
 <?php
-  $firstName = 'John';
-  $lastName = 'Doe';
+$firstName = 'John';
+$lastName = 'Doe';
 
-  $fullName = $firstName . ' ' . $lastName; // To concatenate strings in Php we use .
+$fullName = $firstName . ' ' . $lastName; // To concatenate strings in Php we use .
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +26,10 @@
       <!-- Output -->
       <?= $fullName . '<br>' ?>
       <?= 'Hello, my full name is ' . $fullName ?>
-      <?= "Hello, my name is $fullName" // Variable Interpolation ?>
-      <?= 'Hello my name is \'john\'' // Escaping the ' character ?>
+      <?= "Hello, my name is $fullName" // Variable Interpolation 
+      ?>
+      <?= 'Hello my name is \'john\'' // Escaping the ' character 
+      ?>
     </div>
   </div>
 </body>

@@ -49,7 +49,7 @@ unset($users[0])
       <!-- Output -->
       <p class="text-xl"><?= $output ?></p>
       <p>
-        <pre>
+      <pre>
           <?php print_r($users); ?>
           <hr>
           <?php print_r($fruits); ?>

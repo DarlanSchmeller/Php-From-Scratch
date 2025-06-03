@@ -17,10 +17,10 @@ CONVENTIONS:
 */
 ?>
 
-<?php 
-    $title = 'Learn PHP From Scratch';
-    $heading = 'Welcome To The Course';
-    $body = 'In this course, you will learn the fundamentals of the PHP language';
+<?php
+$title = 'Learn PHP From Scratch';
+$heading = 'Welcome To The Course';
+$body = 'In this course, you will learn the fundamentals of the PHP language';
 ?>
 
 <!DOCTYPE html>

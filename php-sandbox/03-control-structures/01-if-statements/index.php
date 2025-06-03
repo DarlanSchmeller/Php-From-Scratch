@@ -33,4 +33,4 @@ if ($age >= 21) {
     echo 'You are old enough to vote and drink in the US';
 } else if ($age >= 18) {
     echo 'You are NOT old enough to vote in the US';
-} 
+}

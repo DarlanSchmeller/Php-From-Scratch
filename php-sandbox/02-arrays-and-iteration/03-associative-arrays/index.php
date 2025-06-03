@@ -44,7 +44,7 @@ unset($user['Dog\'s name']);
             <p class="text-xl"><?= $output1 . '<br>' . $output2 . '<br>' . $output3 ?></p>
             <h2 class="text-xl font-semibold my-4">User Array: </h2>
             <pre>
-                <?php print_r($user)?>
+                <?php print_r($user) ?>
             </pre>
         </div>
     </div>

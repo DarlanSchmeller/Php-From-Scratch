@@ -1,21 +1,21 @@
-<?php 
-  // Nested For Loop
-  for ($i = 0 ; $i < 5; $i++) {
-    for ($j = 0 ; $j < 5 ; $j++) {
-      echo $i . ' - ' . $j . '<br>';
-    }
+<?php
+// Nested For Loop
+for ($i = 0; $i < 5; $i++) {
+  for ($j = 0; $j < 5; $j++) {
+    echo $i . ' - ' . $j . '<br>';
   }
-  
-  // Nested While Loop
-  $i = 0;
-  while ($i < 0) {
-    $j = 0;
-    while ($j < 5) {
-      echo $i . ' - ' . $j . '<br>';
-      $j++;
-    }
-    $i++;
+}
+
+// Nested While Loop
+$i = 0;
+while ($i < 0) {
+  $j = 0;
+  while ($j < 5) {
+    echo $i . ' - ' . $j . '<br>';
+    $j++;
   }
+  $i++;
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,14 +47,14 @@
 <body>
   <hr>
   <div class="grid-container">
-    <?php for($i = 0; $i < 5; $i++): ?>
-      <?php for($j = 0; $j < 5; $j++): ?>
+    <?php for ($i = 0; $i < 5; $i++): ?>
+      <?php for ($j = 0; $j < 5; $j++): ?>
         <div class="griditem">
-            <?= $i . ' - ' . $j ?>
+          <?= $i . ' - ' . $j ?>
         </div>
       <?php endfor; ?>
     <?php endfor; ?>
-    
+
   </div>
 </body>
 

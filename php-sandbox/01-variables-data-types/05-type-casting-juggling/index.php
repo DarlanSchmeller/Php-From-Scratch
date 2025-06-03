@@ -28,12 +28,12 @@ var_dump($result4);
 var_dump($result6);
 var_dump($result7);
 var_dump($result8);
-echo("<br><br>");
+echo ("<br><br>");
 
 // Explicit Conversion / Type Casting -- In this case PHP automatically converts the string to a number
-$result1 = (string) + $number1;
-$result2 = (int) + $number3;
-$result3 = (bool) + $number1; // Any number above 0 gets converted to true in php
+$result1 = (string) +$number1;
+$result2 = (int) +$number3;
+$result3 = (bool) +$number1; // Any number above 0 gets converted to true in php
 
 var_dump($result);
 var_dump($result2);

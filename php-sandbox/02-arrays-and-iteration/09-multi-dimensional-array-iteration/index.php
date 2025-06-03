@@ -62,7 +62,7 @@ $listings = [
   </header>
   <div class="container mx-auto p-4 mt-4">
     <!-- Output -->
-    <?php foreach($listings as $job) : ?>
+    <?php foreach ($listings as $job) : ?>
       <div class="md my-4">
         <div class="bg-white rounded-lg shadow-md">
           <div class="p-4">

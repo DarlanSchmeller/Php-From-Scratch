@@ -1,7 +1,8 @@
 <?php
 
 // Function to print values as they are written with <pre>
-function inspect($value) {
+function inspect($value)
+{
     echo '<pre>';
     var_dump($value);
     echo '</pre>';
@@ -9,7 +10,7 @@ function inspect($value) {
 
 // Creating an array, both methods accomplish the same
 $names = array('John', 'Jack', 'Jill');
-$numbers = [1,2,3,4,5,6];
+$numbers = [1, 2, 3, 4, 5, 6];
 
 // Just printing our arrays
 inspect($names);

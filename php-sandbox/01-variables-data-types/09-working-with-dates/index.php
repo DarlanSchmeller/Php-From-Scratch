@@ -71,11 +71,11 @@ $output[] = date('Y-m-d | h:i:s a');
             <!-- Output -->
             <p class="text-xl">
                 <?php
-                    foreach($output as $output_item) {
-                        echo($output_item . '<br>');
-                    }
-                 ?>
-             </p>
+                foreach ($output as $output_item) {
+                    echo ($output_item . '<br>');
+                }
+                ?>
+            </p>
         </div>
     </div>
 </body>

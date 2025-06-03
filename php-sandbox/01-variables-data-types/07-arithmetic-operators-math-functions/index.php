@@ -31,7 +31,7 @@ $num3 /= 2;
 // Built-in PHP Functions
 
 // rand()
-$output[] = rand(1,10); // Generate a random integer
+$output[] = rand(1, 10); // Generate a random integer
 $output[] = getrandmax(); // Show largest possible random value
 
 // round()
@@ -54,12 +54,12 @@ $output[] = pi(); // Get value of pi
 $output[] = abs(-4.7); // Absolute value
 
 // max()
-$output[] = max([1,3,4,70,25]); // Find highest value
-$output[] = max(2,3,4,70,80);
+$output[] = max([1, 3, 4, 70, 25]); // Find highest value
+$output[] = max(2, 3, 4, 70, 80);
 
 // min()
-$output[] = min(1,3,4,70,80); // Find lowest value
-$output[] = min(133,494,10,4);
+$output[] = min(1, 3, 4, 70, 80); // Find lowest value
+$output[] = min(133, 494, 10, 4);
 
 // number_format()
 $output[] = number_format(1234567.191234, 2, '.', ','); // Format a number with grouped thousands
@@ -84,11 +84,11 @@ $output[] = number_format(1234567.191234, 2, '.', ','); // Format a number with 
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-white rounded-lg shadow-md p-6 mt-6">
       <!-- Output -->
-       <?php
-          foreach($output as $output_item) {
-            echo($output_item . '<br>'); 
-          }
-       ?>
+      <?php
+      foreach ($output as $output_item) {
+        echo ($output_item . '<br>');
+      }
+      ?>
     </div>
   </div>
 </body>

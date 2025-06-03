@@ -82,7 +82,7 @@ $students = [
   ],
 ];
 
-foreach($students as $student) {
+foreach ($students as $student) {
   $student_name = $student['name'];
   $student_grades = $student['grades'];
 
