@@ -42,11 +42,13 @@ $listings = [
   ],
 ];
 
-function formatSalary($number) {
+function formatSalary($number)
+{
   return '$' . number_format($number);
 }
 
-function highlightTags($tags, $searchTerm) {
+function highlightTags($tags, $searchTerm)
+{
   $tagsStr = implode(', ', $tags);
   return str_replace($searchTerm, "<span class ='bg-yellow-200'>{$searchTerm}</span>", $tagsStr);
 }
