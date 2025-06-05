@@ -42,7 +42,7 @@ $listings = [
   ],
 ];
 
-$formatSalary = fn ($salary) => '$' . number_format($salary, 2);
+$formatSalary = fn($salary) => '$' . number_format($salary, 2);
 
 function highlightTags($tags, $searchTerm)
 {
