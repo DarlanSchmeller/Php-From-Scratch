@@ -6,7 +6,7 @@ class MathUtility
     // and can be accessed without creating an object, like ClassName::$pi.
     public static $pi = 3.14;
 
-    public static function add(...$nums) {
+    public static function addValues(...$nums) {
         return array_sum($nums);
     }
 }
@@ -14,4 +14,4 @@ class MathUtility
 $mathUtil1 = new MathUtility();
 
 echo MathUtility::$pi . '<br>';  // We can access static methods without instancing the class
-echo MathUtility::add(1,2,3,4,5);
+echo MathUtility::addValues(1,2,3,4,5);
