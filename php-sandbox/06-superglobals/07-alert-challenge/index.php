@@ -2,15 +2,14 @@
 $title = '';
 $description = '';
 $submitted = false;
-$Messages = [];
-$errorMessages = [];
+$messages = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $title = htmlspecialchars($_POST['title'] ?? '');
     $description = htmlspecialchars($_POST['description'] ?? '');
 
-    if (!isset($title) || !isset($description)) {
-        $errorMessages[] = 'Title or description is missing.';
+    if (empty($title) || empty($description)) {
+        $messages[] = ['text' => 'Title or description is missing', 'color' => 'bg-red-400'];
     }
 
     $file = $_FILES['logo'];
@@ -35,13 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         if (in_array($fileExtension, $allowedExtensions)) {
             // Upload file
             if (move_uploaded_file($file['tmp_name'], $uploadDir .  $filename)) {
-                $messages[] = 'File Uploaded!';
-                $messages[] = 'File Uploaded!';
+                $messages[] = ['text' => 'File Uploaded!', 'color' => 'bg-green-400'];
             } else {
-                $errorMessages[] = 'File Upload Error: ' . $file['error'];
+                $messages[] = ['text' => 'File Upload Error: ' . $file['error'], 'color' => 'bg-red-400'];
             }
         } else {
-            $errorMessages[] = 'Invalid File Type';
+            $messages[] = ['text' => 'Invalid File Type', 'color' => 'bg-red-400'];
         }
     }
 
@@ -61,24 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
 
 <body class="bg-gray-100">
-<div class="w-auto justify-items-center">
-    <?php if ($messages): ?>
-        <?php foreach ($messages as $message): ?>
-            <div class="flex justify-center self-center mt-4 w-full max-w-md items-center p-2 rounded-md bg-green-400 text-gray-700 font-medium">
-                <?= $message ?>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
-
-    <?php if ($errorMessages): ?>
-        <?php foreach ($errorMessages as $message): ?>
-            <div class="flex justify-center self-center mt-4 w-full max-w-md items-center p-2 rounded-md bg-red-400 text-gray-700 font-medium">
-                <?= $message ?>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
-</div>
-
     <div class="flex justify-center items-center h-screen">
         <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
             <h1 class="text-2xl font-semibold mb-6">Create Job Listing</h1>
@@ -111,7 +91,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                     <p><strong>Description:</strong> <?= $description ?></p>
                 </div>
             <?php endif; ?>
+
+            <div class="w-auto justify-items-center">
+            <?php if ($messages): ?>
+                <?php foreach ($messages as $message): ?>
+                    <div class="flex justify-center self-center mt-4 w-full max-w-md items-center p-2 rounded-md <?= $message['color'] ?> text-gray-800 font-medium">
+                        <?= $message['text'] ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
+        </div>
+        
     </div>
 </body>
 
