@@ -48,17 +48,16 @@ $post = $stmt->fetch();
                 <div class="p-4">
                     <h2 class="text-xl font-semibold"><?= $post['title']; ?></h2>
                     <p class="text-gray-700 text-lg mt-2 mb-5"><?= $post['body']; ?></p>
-                    <a href="/index.php">Go Back</a>
+                    <a href="index.php">Go Back</a>
                 </div>
             </div>
+
+            <a href="/edit.php/?id=<?= $post['id'] ?>" class="bg-green-500 text-white px-4 py-2 rounded block w-full text-center mb-4 hover:bg-green-600 focus:outline-none">Edit</a>
 
             <form action="delete.php" method="post">
                 <input type="hidden" name="_method" value="delete">
                 <input type="hidden" name="id" value="<?= $post['id'] ?>">
-                <button type="submit" name="submit"
-                    class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none">
-                    Delete
-                </button>
+                <button type="submit" name="submit" class="bg-red-500 text-white px-4 py-2 rounded block w-full hover:bg-red-600 focus:outline-none">Delete</button>
             </form>
         </div>
     </div>
